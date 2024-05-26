@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #FFFFFF; /* Color del texto blanco */
+}
+
+.login-container {
+    background-color: #1a1a1a; /* Fondo del contenedor ligeramente más claro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px; /* Agregamos un margen inferior */
+}
+
+.logo {
+    background-color: #FF0000; /* Fondo rojo del logo */
+    border: 2px solid #FFFFFF; /* Bordes blancos */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    color: #FFFFFF; /* Color blanco para el texto */
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-container input,
+.login-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333333; /* Borde del input y select */
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Fondo del input y select */
+    color: #FFFFFF; /* Color del texto en el input y select */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Fondo rojo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
+}
+
+#message {
+    margin-top: 20px;
+    color: red;
+}
+.menu-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Fondo rojo del botón */
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
+}
+
+.bodega-container {
+    width: 500px; /* Más ancho para mostrar las bodegas como hojas de Excel */
+}
+
+.bodega {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bodega h3 {
+    margin-top: 0;
+}
+
+.bodega table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bodega th, .bodega td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: left;
+}
+
+.bodega th {
+    background-color: #444444;
+}
+
+.bodega ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bodega li {
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
