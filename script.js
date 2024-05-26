@@ -16,3 +16,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         message.textContent = 'Seleccione un rol válido.';
     }
 });
+
+// Función para mostrar el mensaje "EN PROCESO..." y redirigir después de un tiempo
+function showProcessingMessage(targetPage) {
+    var processingMessage = document.getElementById('processing-message');
+    processingMessage.style.display = 'block';
+    setTimeout(function(){
+        processingMessage.style.display = 'none';
+        window.location.href = targetPage;
+    }, 2000); // El mensaje se ocultará automáticamente después de 2 segundos (2000 milisegundos)
+}

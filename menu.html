@@ -13,8 +13,11 @@
         </div>
         <h2>Seleccione una opción</h2>
         <button class="menu-button" onclick="location.href='inventario.html'">Bodega</button>
-        <button class="menu-button">Revisar stock</button>
-        <button class="menu-button">Actualizar stock</button>
+        <button class="menu-button" onclick="showProcessingMessage('revisar-stock.html')">Revisar stock</button>
+        <button class="menu-button" onclick="showProcessingMessage('actualizar-stock.html')">Actualizar stock</button>
+        <button class="menu-button" onclick="location.href='index.html'">Atrás</button>
     </div>
+    <div id="processing-message" class="processing-message">EN PROCESO...</div>
+    <script src="script.js"></script>
 </body>
 </html>

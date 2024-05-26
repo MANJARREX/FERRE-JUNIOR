@@ -9,7 +9,7 @@ body {
     color: #FFFFFF; /* Color del texto blanco */
 }
 
-.login-container {
+.login-container, .menu-container, .bodega-container {
     background-color: #1a1a1a; /* Fondo del contenedor ligeramente más claro */
     padding: 20px;
     border-radius: 5px;
@@ -33,17 +33,16 @@ body {
     font-size: 24px;
 }
 
-.login-container h2 {
+h2 {
     margin-bottom: 20px;
 }
 
-.login-container label {
+label {
     display: block;
     margin: 10px 0 5px;
 }
 
-.login-container input,
-.login-container select {
+input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -53,7 +52,7 @@ body {
     color: #FFFFFF; /* Color del texto en el input y select */
 }
 
-.login-container button {
+button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -64,7 +63,7 @@ body {
     cursor: pointer;
 }
 
-.login-container button:hover {
+button:hover {
     background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
 }
 
@@ -72,6 +71,7 @@ body {
     margin-top: 20px;
     color: red;
 }
+
 .menu-button {
     width: 100%;
     padding: 10px;
@@ -118,14 +118,15 @@ body {
     background-color: #444444;
 }
 
-.bodega ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.bodega li {
-    background-color: #333333;
-    padding: 5px;
-    border-radius: 3px;
-    margin-bottom: 5px;
-}
+.processing-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF0000; /* Fondo rojo */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px;
+    border: 2px solid #FFFFFF; /* Borde blanco */
+    border-radius: 5px;
+    z-index: 999; /* Para
