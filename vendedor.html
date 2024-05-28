@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferre-Junior - Vendedor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <h1>Ferre-Junior</h1>
+        </div>
+        <h2>Vendedor</h2>
+        <form id="vendedor-form">
+            <label for="product-name">Nombre del Producto</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="quantity">Cantidad</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <button onclick="window.location.href='index.html'">Atrás</button>
+    </div>
+    <div id="processing-message" class="processing-message">REVISANDO STOCK...</div>
+    <script>
+        document.getElementById("vendedor-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("processing-message").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("processing-message").style.display = "none";
+                window.location.href = "stock.html"; // Redirige a stock.html después del mensaje
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
