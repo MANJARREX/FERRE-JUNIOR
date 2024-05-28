@@ -16,6 +16,7 @@
             <button class="menu-button" onclick="goTostock()">Revisar stock</button>
             <button class="menu-button" onclick="showProcessingMessage()">Actualizar stock</button>
             <button class="menu-button" onclick="goToBodegas()">Bodegas</button>
+            <button class="menu-button" onclick="window.location.href='agregar_material.html'">Agregar Material</button>
             <button onclick="goBack()">Atrás</button>
         </div>
         <div id="processing-message" class="processing-message">EN PROCESO...</div>
@@ -28,8 +29,8 @@
         function goToBodegas() {
             window.location.href = 'bodegas.html';
         }
-        function () {
-            window.location.href = 'bodegas.html';
+        function goTostock() {
+            window.location.href = 'stock.html';
         }
 
         function showProcessingMessage() {

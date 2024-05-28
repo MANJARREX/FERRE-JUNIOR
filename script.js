@@ -41,6 +41,35 @@ function showStockMessage() {
         stockMessage.style.display = 'none';
     }, 1500); 
 }
+
+// Redireccionar a la página de stock al hacer clic en el botón "Revisar Stock"
 document.getElementById("revisar-stock-btn").addEventListener("click", function(event) {
     window.location.href = "stock.html";
 });
+
+// Redireccionar a la página de agregar material al hacer clic en el botón "Agregar" en inventario
+document.getElementById("add-material-btn").addEventListener("click", function(event) {
+    window.location.href = "agregar_material.html";
+});
+
+// Función para mostrar el mensaje "Material agregado"
+document.getElementById("addMaterialForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario
+
+    // Aquí iría el código para agregar el material (no proporcionado en este contexto)
+    showMessage("Material agregado");
+});
+
+function showMessage(message) {
+    const messageDiv = document.getElementById("message");
+    messageDiv.innerText = message;
+    messageDiv.style.display = "block";
+
+    // Oculta el mensaje después de 2 segundos
+    setTimeout(function(){
+        messageDiv.style.display = "none";
+    }, 2000);
+}
+function goBack() {
+    window.history.back();
+}

@@ -9,10 +9,10 @@ body {
     color: #FFFFFF; /* Color del texto blanco */
 }
 
-.login-container, .main-container {
+.login-container, .main-container, .stock-container {
     background-color: rgba(26, 26, 26, 0.8); /* Fondo del contenedor ligeramente más claro y con transparencia */
     padding: 60px;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
     text-align: center;
@@ -104,21 +104,6 @@ button:hover {
     margin-top: 0;
 }
 
-.bodega table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.bodega th, .bodega td {
-    border: 1px solid #333333;
-    padding: 10px;
-    text-align: left;
-}
-
-.bodega th {
-    background-color: #444444;
-}
-
 .bodega ul {
     list-style-type: none;
     padding: 0;
@@ -131,8 +116,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
-/* Estilos para el mensaje "REVISANDO STOCK..." */
-.processing-message, .stock-message {
+.processing-message {
     display: none;
     position: fixed;
     top: 50%;
@@ -149,7 +133,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* Nuevos estilos para las páginas de vendedor y stock */
 .main-container form label {
     display: block;
     margin-bottom: 10px;
@@ -181,7 +164,6 @@ button:hover {
     background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
 }
 
-/* Estilos para la sección de stock */
 .stock-container {
     width: 500px;
     background-color: rgba(42, 42, 42, 0.8); /* Fondo del contenedor */
@@ -214,4 +196,37 @@ button:hover {
 
 .stock-container button:hover {
     background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
+}
+/* Estilos para el botón "Agregar" */
+.add-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Fondo rojo del botón */
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
+}
+/* Estilos para el mensaje "Material agregado" */
+.added-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF0000; /* Fondo rojo */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px;
+    border: 2px solid #FFFFFF; /* Borde blanco */
+    border-radius: 5px;
+    z-index: 999; /* Para asegurarse de que esté por encima de otros elementos */
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
 }
