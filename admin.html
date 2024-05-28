@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Ferretería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <h1>FERRE-JUNIOR</h1>
+        </div>
+        <h2>Administración</h2>
+        <form id="addUserForm">
+            <label for="newUsername">Nombre de usuario:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newRole">Rol:</label>
+            <select id="newRole" name="newRole" required>
+                <option value="">Seleccione un rol</option>
+                <option value="inventario">Inventario</option>
+                <option value="vendedor">Vendedor</option>
+                <option value="contador">Contador</option>
+                <option value="admin">Administrador</option>
+            </select>
+
+            <label for="newPassword">Contraseña:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Agregar Usuario</button>
+        </form>
+        <h3>Lista de Usuarios</h3>
+        <ul id="userList">
+            <!-- Aquí se mostrarán los usuarios -->
+        </ul>
+        <button class="menu-button" onclick="goBack()">Atrás</button>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+
+        document.getElementById('addUserForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('newUsername').value;
+            const role = document.getElementById('newRole').value;
+            const password = document.getElementById('newPassword').value;
+            
+            // Aquí puedes agregar el código para enviar esta información a tu backend
+
+            const userList = document.getElementById('userList');
+            const userItem = document.createElement('li');
+            userItem.textContent = `Usuario: ${username}, Rol: ${role}`;
+            userList.appendChild(userItem);
+            
+            // Limpia el formulario
+            document.getElementById('addUserForm').reset();
+        });
+    </script>
+</body>
+</html>

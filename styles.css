@@ -9,10 +9,10 @@ body {
     color: #FFFFFF; /* Color del texto blanco */
 }
 
-.login-container {
-    background-color: #1a1a1a; /* Fondo del contenedor ligeramente más claro */
-    padding: 20px;
-    border-radius: 5px;
+.login-container, .main-container {
+    background-color: rgba(26, 26, 26, 0.8); /* Fondo del contenedor ligeramente más claro y con transparencia */
+    padding: 60px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 300px;
     text-align: center;
@@ -33,27 +33,26 @@ body {
     font-size: 24px;
 }
 
-.login-container h2 {
+h2 {
     margin-bottom: 20px;
 }
 
-.login-container label {
+label {
     display: block;
     margin: 10px 0 5px;
 }
 
-.login-container input,
-.login-container select {
-    width: 100%;
+input, select {
+    width: 90%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border: 1px solid #333333; /* Borde del input y select */
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #2a2a2a; /* Fondo del input y select */
     color: #FFFFFF; /* Color del texto en el input y select */
 }
 
-.login-container button {
+button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -62,9 +61,10 @@ body {
     color: white;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.login-container button:hover {
+button:hover {
     background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
 }
 
@@ -72,6 +72,7 @@ body {
     margin-top: 20px;
     color: red;
 }
+
 .menu-button {
     width: 100%;
     padding: 10px;
@@ -93,7 +94,7 @@ body {
 }
 
 .bodega {
-    background-color: #2a2a2a;
+    background-color: rgba(42, 42, 42, 0.8); /* Fondo del contenedor con transparencia */
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -128,4 +129,89 @@ body {
     padding: 5px;
     border-radius: 3px;
     margin-bottom: 5px;
+}
+
+/* Estilos para el mensaje "REVISANDO STOCK..." */
+.processing-message, .stock-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF0000; /* Fondo rojo */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px;
+    border: 2px solid #FFFFFF; /* Borde blanco */
+    border-radius: 5px;
+    z-index: 999; /* Para asegurarse de que esté por encima de otros elementos */
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Nuevos estilos para las páginas de vendedor y stock */
+.main-container form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* Color del texto en el formulario */
+}
+
+.main-container form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333333; /* Borde del input */
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Fondo del input */
+    color: #FFFFFF; /* Color del texto en el input */
+}
+
+.main-container form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Fondo rojo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-container form button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
+}
+
+/* Estilos para la sección de stock */
+.stock-container {
+    width: 500px;
+    background-color: rgba(42, 42, 42, 0.8); /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.stock-container h2 {
+    margin-bottom: 20px;
+}
+
+.stock-container p {
+    margin: 10px 0;
+}
+
+.stock-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF0000; /* Fondo rojo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.stock-container button:hover {
+    background-color: #CC0000; /* Color más oscuro al pasar el cursor por encima */
 }
