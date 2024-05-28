@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
     const message = document.getElementById('message');
 
-    // Aquí puedes añadir la lógica para validar el usuario y la contraseña
+    // Aquí  el usuario y la contraseña
     if (role === 'inventario') {
         // Redirigir a la página de inventario
         window.location.href = 'inventario.html';
@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Redirigir a la página de vendedor
         window.location.href = 'vendedor.html';
     } else if (role === 'contador') {
-        // Redirigir a la página de contador (aquí puedes agregar la lógica correspondiente)
+        // Redirigir a la página de contador 
         message.style.color = 'red';
         message.textContent = 'Funcionalidad para contador en desarrollo.';
     } else {
@@ -30,7 +30,7 @@ function showProcessingMessage() {
     processingMessage.style.display = 'block';
     setTimeout(function(){
         processingMessage.style.display = 'none';
-    }, 2000); // El mensaje se ocultará automáticamente después de 2 segundos (2000 milisegundos)
+    }, 2000); 
 }
 
 // Función para mostrar el mensaje "REVISANDO STOCK..."
@@ -39,5 +39,8 @@ function showStockMessage() {
     stockMessage.style.display = 'block';
     setTimeout(function(){
         stockMessage.style.display = 'none';
-    }, 1500); // El mensaje se ocultará automáticamente después de 1.5 segundos (1500 milisegundos)
+    }, 1500); 
 }
+document.getElementById("revisar-stock-btn").addEventListener("click", function(event) {
+    window.location.href = "stock.html";
+});
