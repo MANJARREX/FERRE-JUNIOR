@@ -23,7 +23,7 @@
         </form>
         <button onclick="window.location.href='index.html'">Atrás</button>
     </div>
-    <div id="processing-message" class="processing-message">REVISANDO STOCK...</div>
+    <div id="processing-message" class="processing-message">REEDIRIGIENDO...</div>
     <script>
         document.getElementById("vendedor-form").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -31,7 +31,7 @@
             setTimeout(function() {
                 document.getElementById("processing-message").style.display = "none";
                 window.location.href = "inventario1.html";
-            }, 1500);
+            }, 700);
         });
     </script>
 </body>
